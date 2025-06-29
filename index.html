@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ojital | AI Automation Dashboard</title>
+    <title>Ojital Ai Automation Control Center</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
@@ -189,7 +189,7 @@
                     <i class="fas fa-brain text-white text-lg wave-animation"></i>
                 </div>
                 <div>
-                    <span class="text-lg font-bold gradient-text tracking-tight">Ojital</span>
+                    <span class="text-lg font-bold gradient-text tracking-tight">Ojital Ai Control</span>
                     <span class="text-xs bg-gradient-to-r from-accent-600 to-accent-500 text-white px-2 py-0.5 rounded-full ml-2">PRO</span>
                 </div>
             </div>
@@ -204,61 +204,70 @@
                 <div>
                     <button class="w-full flex items-center justify-between px-4 py-3 rounded-xl glass-effect text-white hover:bg-gray-800/30 transition-colors duration-200">
                         <span class="font-medium flex items-center">
-                            <i class="fas fa-rocket text-primary-400 mr-3 pulse-animation"></i>
-                            <span>Quick Start</span>
+                            <i class="fas fa-plus-circle text-primary-400 mr-3 pulse-animation"></i>
+                            <span>Create Workflow</span>
                         </span>
-                        <i class="fas fa-bolt text-accent-400"></i>
+                        <i class="fas fa-external-link-alt text-accent-400"></i>
                     </button>
                 </div>
                 
-                <!-- Automations Section -->
+                <!-- Ojital Ai Workflows Section -->
                 <div class="mt-8">
-                    <h3 class="text-xs uppercase tracking-wider text-gray-500 px-3 mb-3">Automations</h3>
+                    <h3 class="text-xs uppercase tracking-wider text-gray-500 px-3 mb-3">Ojital Ai Workflows</h3>
                     <a href="#" class="flex items-center px-3 py-3 rounded-lg text-white hover:bg-gray-800/30 transition-colors duration-200 bg-gray-800/40 border border-gray-800/70 shadow-sm">
                         <i class="fas fa-play-circle text-primary-400 mr-3 text-lg"></i>
                         <span class="font-medium">Active Workflows</span>
-                        <span class="ml-auto bg-primary-500/10 text-primary-400 text-xs px-2 py-1 rounded-full">24</span>
+                        <span class="ml-auto bg-primary-500/10 text-primary-400 text-xs px-2 py-1 rounded-full">18</span>
                     </a>
-                    <a href="#" class="flex items-center px-3 py-3 rounded-lg text-gray-400 hover:bg-gray-800/30 hover:text-white transition-colors duration-200">
-                        <i class="fas fa-project-diagram text-gray-500 mr-3 text-lg"></i>
-                        <span>Workflow Editor</span>
+                    <a href="http://localhost:5678" target="_blank" class="flex items-center px-3 py-3 rounded-lg text-gray-400 hover:bg-gray-800/30 hover:text-white transition-colors duration-200">
+                        <i class="fas fa-edit text-gray-500 mr-3 text-lg"></i>
+                        <span>Ojital Ai Editor</span>
                         <i class="fas fa-external-link-alt text-xs text-gray-600 ml-auto"></i>
                     </a>
                     <a href="#" class="flex items-center px-3 py-3 rounded-lg text-gray-400 hover:bg-gray-800/30 hover:text-white transition-colors duration-200">
                         <i class="fas fa-history text-gray-500 mr-3 text-lg"></i>
                         <span>Execution History</span>
-                        <span class="ml-auto text-xs text-gray-500">13.4k</span>
+                        <span class="ml-auto text-xs text-gray-500">2.3k</span>
                     </a>
                     <a href="#" class="flex items-center px-3 py-3 rounded-lg text-gray-400 hover:bg-gray-800/30 hover:text-white transition-colors duration-200">
-                        <i class="fas fa-plug text-gray-500 mr-3 text-lg"></i>
-                        <span>Integrations</span>
-                        <span class="ml-auto text-xs bg-green-500/10 text-green-400 px-2 py-1 rounded-full">10+</span>
+                        <i class="fas fa-puzzle-piece text-gray-500 mr-3 text-lg"></i>
+                        <span>Available Nodes</span>
+                        <span class="ml-auto text-xs bg-green-500/10 text-green-400 px-2 py-1 rounded-full">400+</span>
+                    </a>
+                    <a href="#" class="flex items-center px-3 py-3 rounded-lg text-gray-400 hover:bg-gray-800/30 hover:text-white transition-colors duration-200">
+                        <i class="fas fa-exclamation-triangle text-gray-500 mr-3 text-lg"></i>
+                        <span>Failed Executions</span>
+                        <span class="ml-auto text-xs bg-red-500/10 text-red-400 px-2 py-1 rounded-full">3</span>
                     </a>
                 </div>
                 
-                <!-- Settings Section -->
+                <!-- System & Settings Section -->
                 <div class="mt-8">
-                    <h3 class="text-xs uppercase tracking-wider text-gray-500 px-3 mb-3">Settings</h3>
+                    <h3 class="text-xs uppercase tracking-wider text-gray-500 px-3 mb-3">System & Settings</h3>
+                    <a href="#" class="flex items-center px-3 py-3 rounded-lg text-gray-400 hover:bg-gray-800/30 hover:text-white transition-colors duration-200">
+                        <i class="fas fa-server text-gray-500 mr-3 text-lg"></i>
+                        <span>Ojital Ai Instance</span>
+                        <span class="ml-auto text-xs bg-green-500/10 text-green-500 px-2 py-0.5 rounded-full">Online</span>
+                    </a>
+                    <a href="#" class="flex items-center px-3 py-3 rounded-lg text-gray-400 hover:bg-gray-800/30 hover:text-white transition-colors duration-200">
+                        <i class="fas fa-database text-gray-500 mr-3 text-lg"></i>
+                        <span>Database</span>
+                        <span class="ml-auto text-xs text-gray-500">SQLite</span>
+                    </a>
                     <a href="#" class="flex items-center px-3 py-3 rounded-lg text-gray-400 hover:bg-gray-800/30 hover:text-white transition-colors duration-200">
                         <i class="fas fa-cog text-gray-500 mr-3 text-lg"></i>
-                        <span>General Settings</span>
+                        <span>Configuration</span>
                     </a>
                     <a href="#" class="flex items-center px-3 py-3 rounded-lg text-gray-400 hover:bg-gray-800/30 hover:text-white transition-colors duration-200">
-                        <i class="fas fa-users text-gray-500 mr-3 text-lg"></i>
-                        <span>Team Members</span>
-                        <span class="ml-auto text-xs text-gray-500">3</span>
-                    </a>
-                    <a href="#" class="flex items-center px-3 py-3 rounded-lg text-gray-400 hover:bg-gray-800/30 hover:text-white transition-colors duration-200">
-                        <i class="fas fa-shield-alt text-gray-500 mr-3 text-lg"></i>
-                        <span>Security</span>
-                        <span class="ml-auto text-xs bg-green-500/10 text-green-500 px-2 py-0.5 rounded-full">Active</span>
+                        <i class="fas fa-download text-gray-500 mr-3 text-lg"></i>
+                        <span>Export/Import</span>
                     </a>
                 </div>
             </nav>
             
             <!-- Create Workflow Button -->
-            <button class="w-full mt-6 bg-gradient-to-r from-primary-600 to-accent-600 hover:from-primary-500 hover:to-accent-500 text-white py-2.5 px-4 rounded-xl text-sm font-medium shadow-lg hover:shadow-primary-500/30 transition-all duration-300 hover:shadow-xl">
-                <i class="fas fa-plus mr-2"></i> Create Workflow
+            <button class="w-full mt-6 bg-gradient-to-r from-primary-600 to-accent-600 hover:from-primary-500 hover:to-accent-500 text-white py-2.5 px-4 rounded-xl text-sm font-medium shadow-lg hover:shadow-primary-500/30 transition-all duration-300 hover:shadow-xl" onclick="window.open('http://localhost:5678', '_blank')">
+                <i class="fas fa-plus mr-2"></i> New Ojital Ai Workflow
             </button>
         </div>
         
@@ -272,8 +281,8 @@
                     </div>
                 </div>
                 <div class="flex-1 min-w-0">
-                    <p class="text-sm font-medium truncate">Admin User</p>
-                    <p class="text-xs text-gray-500 truncate">admin@ojital.io</p>
+                    <p class="text-sm font-medium truncate">Ojital Ai Admin</p>
+                    <p class="text-xs text-gray-500 truncate">admin@Ojital Ai.local</p>
                 </div>
                 <i class="fas fa-chevron-down text-xs text-gray-400 transition-transform duration-200 group-hover:rotate-180"></i>
                 
@@ -304,7 +313,7 @@
                     <i class="fas fa-bars text-xl"></i>
                 </button>
                 <div class="relative">
-                    <input type="text" placeholder="Search workflows, actions..." 
+                    <input type="text" placeholder="Search workflows, nodes, executions..." 
                            class="bg-gray-900/30 border border-gray-800/50 focus:border-primary-500 rounded-xl pl-10 pr-4 py-2 w-72 text-sm focus:ring-1 focus:ring-primary-500/30 placeholder-gray-500 transition-all duration-200 backdrop-blur-sm">
                     <i class="fas fa-search absolute left-3 top-3 text-gray-500 text-sm"></i>
                 </div>
@@ -358,9 +367,9 @@
             <div class="flex flex-col md:flex-row md:items-center justify-between mb-8">
                 <div class="mb-4 md:mb-0">
                     <h1 class="text-3xl font-bold flex items-center">
-                        <span class="gradient-text">Automation Dashboard</span>
+                        <span class="gradient-text">Ojital Ai Control Center</span>
                     </h1>
-                    <p class="text-sm text-gray-400 mt-2">Monitor and manage your automated workflows in real-time</p>
+                    <p class="text-sm text-gray-400 mt-2">Monitor and manage your Ojital Ai workflows and executions in real-time</p>
                 </div>
                 <div class="flex items-center space-x-3">
                     <button class="flex items-center space-x-2 bg-gray-800/40 hover:bg-gray-800/60 border border-gray-800/50 px-3 py-2 rounded-xl text-sm transition-all duration-200 hover:shadow-sm">
@@ -368,9 +377,9 @@
                         <span>Last 7 days</span>
                         <i class="fas fa-chevron-down text-gray-400 text-xs"></i>
                     </button>
-                    <button class="flex items-center space-x-2 bg-gradient-to-r from-primary-600 to-accent-600 hover:from-primary-500 hover:to-accent-500 text-white px-3 py-2 rounded-xl text-sm font-medium transition-all duration-200 shadow-md hover:shadow-lg hover:shadow-primary-500/30">
-                        <i class="fas fa-magic text-white text-xs"></i>
-                        <span>New Automation</span>
+                    <button class="flex items-center space-x-2 bg-gradient-to-r from-primary-600 to-accent-600 hover:from-primary-500 hover:to-accent-500 text-white px-3 py-2 rounded-xl text-sm font-medium transition-all duration-200 shadow-md hover:shadow-lg hover:shadow-primary-500/30" onclick="window.open('http://localhost:5678', '_blank')">
+                        <i class="fas fa-plus text-white text-xs"></i>
+                        <span>New Workflow</span>
                     </button>
                     <button class="p-2 text-gray-400 hover:text-white hover:bg-gray-800/50 rounded-xl transition-all duration-200">
                         <i class="fas fa-sync-alt text-sm"></i>
@@ -378,107 +387,375 @@
                 </div>
             </div>
             
+            <!-- Quick Actions Panel -->
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-4 mb-6">
+                <button class="glass-effect rounded-xl p-4 text-left hover:bg-gray-800/30 transition-all duration-200 group">
+                    <div class="flex items-center justify-between mb-2">
+                        <i class="fas fa-plus-circle text-primary-400 text-xl group-hover:scale-110 transition-transform"></i>
+                        <span class="text-xs bg-primary-500/10 text-primary-400 px-2 py-1 rounded-full">Quick</span>
+                    </div>
+                    <h3 class="font-medium text-sm mb-1">Create Workflow</h3>
+                    <p class="text-xs text-gray-500">Launch Ojital Ai editor</p>
+                </button>
+                
+                <button class="glass-effect rounded-xl p-4 text-left hover:bg-gray-800/30 transition-all duration-200 group">
+                    <div class="flex items-center justify-between mb-2">
+                        <i class="fas fa-upload text-teal-400 text-xl group-hover:scale-110 transition-transform"></i>
+                        <span class="text-xs bg-teal-500/10 text-teal-400 px-2 py-1 rounded-full">Import</span>
+                    </div>
+                    <h3 class="font-medium text-sm mb-1">Import Workflow</h3>
+                    <p class="text-xs text-gray-500">Upload JSON file</p>
+                </button>
+                
+                <button class="glass-effect rounded-xl p-4 text-left hover:bg-gray-800/30 transition-all duration-200 group">
+                    <div class="flex items-center justify-between mb-2">
+                        <i class="fas fa-play text-green-400 text-xl group-hover:scale-110 transition-transform"></i>
+                        <span class="text-xs bg-green-500/10 text-green-400 px-2 py-1 rounded-full">Batch</span>
+                    </div>
+                    <h3 class="font-medium text-sm mb-1">Start All</h3>
+                    <p class="text-xs text-gray-500">Activate workflows</p>
+                </button>
+                
+                <button class="glass-effect rounded-xl p-4 text-left hover:bg-gray-800/30 transition-all duration-200 group">
+                    <div class="flex items-center justify-between mb-2">
+                        <i class="fas fa-download text-purple-400 text-xl group-hover:scale-110 transition-transform"></i>
+                        <span class="text-xs bg-purple-500/10 text-purple-400 px-2 py-1 rounded-full">Export</span>
+                    </div>
+                    <h3 class="font-medium text-sm mb-1">Backup All</h3>
+                    <p class="text-xs text-gray-500">Download archive</p>
+                </button>
+            </div>
+
             <!-- Stats Cards -->
             <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
                 <!-- Active Workflows -->
-                <div class="glass-effect rounded-xl p-6 card-hover hover:shadow-primary-500/10 transition-all duration-300">
+                <div class="glass-effect rounded-xl p-6 card-hover hover:shadow-primary-500/10 transition-all duration-300 cursor-pointer group">
                     <div class="flex items-start justify-between">
                         <div>
                             <p class="text-sm text-gray-400 mb-1">Active Workflows</p>
-                            <h3 class="text-3xl font-semibold">24</h3>
+                            <h3 class="text-3xl font-semibold">18</h3>
                             <div class="flex items-center mt-3">
                                 <span class="text-xs bg-green-500/10 text-green-400 px-2 py-0.5 rounded-full flex items-center">
-                                    <i class="fas fa-caret-up mr-1"></i> 12.5%
+                                    <i class="fas fa-caret-up mr-1"></i> +2
                                 </span>
-                                <span class="text-xs text-gray-500 ml-2">vs last week</span>
+                                <span class="text-xs text-gray-500 ml-2">this week</span>
+                            </div>
+                            <div class="flex items-center mt-2 space-x-2">
+                                <button class="text-xs bg-primary-500/10 text-primary-400 px-2 py-1 rounded hover:bg-primary-500/20 transition-colors">
+                                    <i class="fas fa-eye mr-1"></i>View All
+                                </button>
+                                <button class="text-xs bg-green-500/10 text-green-400 px-2 py-1 rounded hover:bg-green-500/20 transition-colors">
+                                    <i class="fas fa-play mr-1"></i>Start All
+                                </button>
                             </div>
                         </div>
-                        <div class="bg-primary-500/10 text-primary-400 p-3 rounded-xl border border-primary-500/20">
-                            <i class="fas fa-rocket text-lg"></i>
+                        <div class="bg-primary-500/10 text-primary-400 p-3 rounded-xl border border-primary-500/20 group-hover:bg-primary-500/20 transition-colors">
+                            <i class="fas fa-play-circle text-lg"></i>
                         </div>
                     </div>
                     <div class="mt-4 h-1.5 w-full bg-gray-800 rounded-full overflow-hidden">
-                        <div class="h-full bg-primary-500 rounded-full" style="width: 75%"></div>
+                        <div class="h-full bg-primary-500 rounded-full transition-all duration-1000" style="width: 90%"></div>
                     </div>
                 </div>
                 
-                <!-- Executions Today -->
-                <div class="glass-effect rounded-xl p-6 card-hover hover:shadow-teal-500/10 transition-all duration-300">
+                <!-- Total Executions Today -->
+                <div class="glass-effect rounded-xl p-6 card-hover hover:shadow-teal-500/10 transition-all duration-300 cursor-pointer group">
                     <div class="flex items-start justify-between">
                         <div>
                             <p class="text-sm text-gray-400 mb-1">Executions Today</p>
-                            <h3 class="text-3xl font-semibold">1,248</h3>
+                            <h3 class="text-3xl font-semibold">847</h3>
                             <div class="flex items-center mt-3">
                                 <span class="text-xs bg-green-500/10 text-green-400 px-2 py-0.5 rounded-full flex items-center">
-                                    <i class="fas fa-caret-up mr-1"></i> 8.2%
+                                    <i class="fas fa-caret-up mr-1"></i> 15.3%
                                 </span>
                                 <span class="text-xs text-gray-500 ml-2">vs yesterday</span>
                             </div>
+                            <div class="flex items-center mt-2 space-x-2">
+                                <button class="text-xs bg-teal-500/10 text-teal-400 px-2 py-1 rounded hover:bg-teal-500/20 transition-colors">
+                                    <i class="fas fa-history mr-1"></i>History
+                                </button>
+                                <button class="text-xs bg-blue-500/10 text-blue-400 px-2 py-1 rounded hover:bg-blue-500/20 transition-colors">
+                                    <i class="fas fa-chart-line mr-1"></i>Analytics
+                                </button>
+                            </div>
                         </div>
-                        <div class="bg-teal-500/10 text-teal-400 p-3 rounded-xl border border-teal-500/20">
-                            <i class="fas fa-chart-line text-lg"></i>
+                        <div class="bg-teal-500/10 text-teal-400 p-3 rounded-xl border border-teal-500/20 group-hover:bg-teal-500/20 transition-colors">
+                            <i class="fas fa-bolt text-lg"></i>
                         </div>
                     </div>
                     <div class="mt-4 h-1.5 w-full bg-gray-800 rounded-full overflow-hidden">
-                        <div class="h-full bg-teal-500 rounded-full" style="width: 68%"></div>
+                        <div class="h-full bg-teal-500 rounded-full transition-all duration-1000" style="width: 68%"></div>
                     </div>
                 </div>
                 
                 <!-- Success Rate -->
-                <div class="glass-effect rounded-xl p-6 card-hover hover:shadow-blue-500/10 transition-all duration-300">
+                <div class="glass-effect rounded-xl p-6 card-hover hover:shadow-blue-500/10 transition-all duration-300 cursor-pointer group">
                     <div class="flex items-start justify-between">
                         <div>
                             <p class="text-sm text-gray-400 mb-1">Success Rate</p>
-                            <h3 class="text-3xl font-semibold">98.7%</h3>
+                            <h3 class="text-3xl font-semibold">96.4%</h3>
                             <div class="flex items-center mt-3">
-                                <span class="text-xs bg-green-500/10 text-green-400 px-2 py-0.5 rounded-full flex items-center">
-                                    <i class="fas fa-caret-up mr-1"></i> 1.2%
+                                <span class="text-xs bg-red-500/10 text-red-400 px-2 py-0.5 rounded-full flex items-center">
+                                    <i class="fas fa-caret-down mr-1"></i> 2.3%
                                 </span>
-                                <span class="text-xs text-gray-500 ml-2">vs last week</span>
+                                <span class="text-xs text-gray-500 ml-2">3 failures today</span>
+                            </div>
+                            <div class="flex items-center mt-2 space-x-2">
+                                <button class="text-xs bg-red-500/10 text-red-400 px-2 py-1 rounded hover:bg-red-500/20 transition-colors">
+                                    <i class="fas fa-exclamation-triangle mr-1"></i>Failures
+                                </button>
+                                <button class="text-xs bg-yellow-500/10 text-yellow-400 px-2 py-1 rounded hover:bg-yellow-500/20 transition-colors">
+                                    <i class="fas fa-redo mr-1"></i>Retry All
+                                </button>
                             </div>
                         </div>
-                        <div class="bg-blue-500/10 text-blue-400 p-3 rounded-xl border border-blue-500/20">
+                        <div class="bg-blue-500/10 text-blue-400 p-3 rounded-xl border border-blue-500/20 group-hover:bg-blue-500/20 transition-colors">
                             <i class="fas fa-check-circle text-lg"></i>
                         </div>
                     </div>
                     <div class="mt-4 h-1.5 w-full bg-gray-800 rounded-full overflow-hidden">
-                        <div class="h-full bg-blue-500 rounded-full" style="width: 98%"></div>
+                        <div class="h-full bg-blue-500 rounded-full transition-all duration-1000" style="width: 96%"></div>
                     </div>
                 </div>
                 
-                <!-- Average Runtime -->
-                <div class="glass-effect rounded-xl p-6 card-hover hover:shadow-purple-500/10 transition-all duration-300">
+                <!-- Average Execution Time -->
+                <div class="glass-effect rounded-xl p-6 card-hover hover:shadow-purple-500/10 transition-all duration-300 cursor-pointer group">
                     <div class="flex items-start justify-between">
                         <div>
-                            <p class="text-sm text-gray-400 mb-1">Avg Runtime</p>
-                            <h3 class="text-3xl font-semibold">2.1s</h3>
+                            <p class="text-sm text-gray-400 mb-1">Avg Execution Time</p>
+                            <h3 class="text-3xl font-semibold">3.2s</h3>
                             <div class="flex items-center mt-3">
-                                <span class="text-xs bg-red-500/10 text-red-400 px-2 py-0.5 rounded-full flex items-center">
-                                    <i class="fas fa-caret-down mr-1"></i> 0.4s
+                                <span class="text-xs bg-green-500/10 text-green-400 px-2 py-0.5 rounded-full flex items-center">
+                                    <i class="fas fa-caret-down mr-1"></i> 0.8s
                                 </span>
-                                <span class="text-xs text-gray-500 ml-2">vs last week</span>
+                                <span class="text-xs text-gray-500 ml-2">improvement</span>
+                            </div>
+                            <div class="flex items-center mt-2 space-x-2">
+                                <button class="text-xs bg-purple-500/10 text-purple-400 px-2 py-1 rounded hover:bg-purple-500/20 transition-colors">
+                                    <i class="fas fa-clock mr-1"></i>Details
+                                </button>
+                                <button class="text-xs bg-orange-500/10 text-orange-400 px-2 py-1 rounded hover:bg-orange-500/20 transition-colors">
+                                    <i class="fas fa-tachometer-alt mr-1"></i>Optimize
+                                </button>
                             </div>
                         </div>
-                        <div class="bg-purple-500/10 text-purple-400 p-3 rounded-xl border border-purple-500/20">
+                        <div class="bg-purple-500/10 text-purple-400 p-3 rounded-xl border border-purple-500/20 group-hover:bg-purple-500/20 transition-colors">
                             <i class="fas fa-stopwatch text-lg"></i>
                         </div>
                     </div>
                     <div class="mt-4 h-1.5 w-full bg-gray-800 rounded-full overflow-hidden">
-                        <div class="h-full bg-purple-500 rounded-full" style="width: 90%"></div>
+                        <div class="h-full bg-purple-500 rounded-full transition-all duration-1000" style="width: 75%"></div>
                     </div>
                 </div>
             </div>
             
+            <!-- Real-time Monitoring Section -->
+            <div class="grid grid-cols-1 xl:grid-cols-4 gap-6 mb-6">
+                <!-- Live Execution Monitor -->
+                <div class="xl:col-span-3 glass-effect rounded-xl overflow-hidden shadow-sm transition-all duration-300 hover:shadow-lg">
+                    <div class="p-4 border-b border-gray-800/50 flex items-center justify-between">
+                        <div class="flex items-center space-x-3">
+                            <h2 class="text-lg font-semibold">Live Execution Monitor</h2>
+                            <div class="flex items-center space-x-1">
+                                <div class="w-2 h-2 bg-green-500 rounded-full animate-pulse"></div>
+                                <span class="text-xs text-green-400">Live</span>
+                            </div>
+                        </div>
+                        <div class="flex items-center space-x-2">
+                            <button class="text-xs px-3 py-1 rounded-lg bg-green-500/10 text-green-400 hover:bg-green-500/20 transition-colors">
+                                <i class="fas fa-play mr-1"></i>Auto-refresh
+                            </button>
+                            <button class="text-xs px-3 py-1 rounded-lg text-gray-400 hover:bg-gray-800/60">
+                                <i class="fas fa-pause mr-1"></i>Pause
+                            </button>
+                            <button class="text-xs px-3 py-1 rounded-lg text-gray-400 hover:bg-gray-800/60">
+                                <i class="fas fa-filter mr-1"></i>Filter
+                            </button>
+                        </div>
+                    </div>
+                    <div class="p-4 space-y-3 max-h-64 overflow-y-auto custom-scrollbar">
+                        <!-- Live Execution Item -->
+                        <div class="flex items-center justify-between p-3 bg-gray-900/30 rounded-lg border border-gray-800/30 hover:bg-gray-800/40 transition-colors animate-fade-in">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-3 h-3 bg-green-500 rounded-full animate-pulse"></div>
+                                <div>
+                                    <p class="text-sm font-medium">Email Automation</p>
+                                    <p class="text-xs text-gray-500">Execution ID: exec_8fa9b2c1</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <span class="text-xs bg-blue-500/10 text-blue-400 px-2 py-1 rounded">Running</span>
+                                <span class="text-xs text-gray-500">2.1s</span>
+                                <button class="text-gray-500 hover:text-primary-400 transition-colors">
+                                    <i class="fas fa-eye text-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Live Execution Item -->
+                        <div class="flex items-center justify-between p-3 bg-gray-900/30 rounded-lg border border-gray-800/30 hover:bg-gray-800/40 transition-colors animate-fade-in">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-3 h-3 bg-green-500 rounded-full"></div>
+                                <div>
+                                    <p class="text-sm font-medium">Slack Notifications</p>
+                                    <p class="text-xs text-gray-500">Execution ID: exec_7da8c3f2</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <span class="text-xs bg-green-500/10 text-green-400 px-2 py-1 rounded">Completed</span>
+                                <span class="text-xs text-gray-500">0.8s</span>
+                                <button class="text-gray-500 hover:text-primary-400 transition-colors">
+                                    <i class="fas fa-eye text-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Live Execution Item -->
+                        <div class="flex items-center justify-between p-3 bg-gray-900/30 rounded-lg border border-gray-800/30 hover:bg-gray-800/40 transition-colors animate-fade-in">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-3 h-3 bg-red-500 rounded-full"></div>
+                                <div>
+                                    <p class="text-sm font-medium">API Data Sync</p>
+                                    <p class="text-xs text-gray-500">Execution ID: exec_6bc7a4e3</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <span class="text-xs bg-red-500/10 text-red-400 px-2 py-1 rounded">Failed</span>
+                                <span class="text-xs text-gray-500">4.7s</span>
+                                <button class="text-gray-500 hover:text-red-400 transition-colors">
+                                    <i class="fas fa-redo text-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Live Execution Item -->
+                        <div class="flex items-center justify-between p-3 bg-gray-900/30 rounded-lg border border-gray-800/30 hover:bg-gray-800/40 transition-colors animate-fade-in">
+                            <div class="flex items-center space-x-3">
+                                <div class="w-3 h-3 bg-yellow-500 rounded-full animate-pulse"></div>
+                                <div>
+                                    <p class="text-sm font-medium">Database Backup</p>
+                                    <p class="text-xs text-gray-500">Execution ID: exec_5ad6b9f4</p>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-4">
+                                <span class="text-xs bg-yellow-500/10 text-yellow-400 px-2 py-1 rounded">Waiting</span>
+                                <span class="text-xs text-gray-500">--</span>
+                                <button class="text-gray-500 hover:text-primary-400 transition-colors">
+                                    <i class="fas fa-eye text-sm"></i>
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="px-4 pb-4 border-t border-gray-800/50 pt-4">
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-4">
+                                <div class="flex items-center">
+                                    <div class="w-3 h-3 rounded-full bg-green-500 mr-2"></div>
+                                    <span class="text-xs text-gray-400">Running/Success</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-3 h-3 rounded-full bg-red-500 mr-2"></div>
+                                    <span class="text-xs text-gray-400">Failed</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-3 h-3 rounded-full bg-yellow-500 mr-2"></div>
+                                    <span class="text-xs text-gray-400">Waiting</span>
+                                </div>
+                            </div>
+                            <button class="text-sm text-primary-400 hover:text-primary-300 flex items-center transition-colors duration-200">
+                                View Full Log
+                                <i class="fas fa-arrow-right ml-1 text-xs"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Quick Stats Panel -->
+                <div class="glass-effect rounded-xl overflow-hidden shadow-sm transition-all duration-300 hover:shadow-lg">
+                    <div class="p-4 border-b border-gray-800/50">
+                        <h2 class="text-lg font-semibold">Quick Stats</h2>
+                    </div>
+                    <div class="p-4 space-y-4">
+                        <!-- Stat Item -->
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-clock text-blue-400 text-sm"></i>
+                                <span class="text-sm text-gray-400">Last Hour</span>
+                            </div>
+                            <span class="text-sm font-medium">47 executions</span>
+                        </div>
+                        
+                        <!-- Stat Item -->
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-bolt text-yellow-400 text-sm"></i>
+                                <span class="text-sm text-gray-400">Queue</span>
+                            </div>
+                            <span class="text-sm font-medium">3 pending</span>
+                        </div>
+                        
+                        <!-- Stat Item -->
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-exclamation-triangle text-red-400 text-sm"></i>
+                                <span class="text-sm text-gray-400">Errors</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <span class="text-sm font-medium">3</span>
+                                <button class="text-xs bg-red-500/10 text-red-400 px-2 py-1 rounded hover:bg-red-500/20 transition-colors">
+                                    Fix
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <!-- Stat Item -->
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-server text-green-400 text-sm"></i>
+                                <span class="text-sm text-gray-400">Instance</span>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <div class="w-2 h-2 bg-green-500 rounded-full"></div>
+                                <span class="text-sm font-medium text-green-400">Online</span>
+                            </div>
+                        </div>
+                        
+                        <!-- Stat Item -->
+                        <div class="flex items-center justify-between">
+                            <div class="flex items-center space-x-2">
+                                <i class="fas fa-memory text-purple-400 text-sm"></i>
+                                <span class="text-sm text-gray-400">Memory</span>
+                            </div>
+                            <span class="text-sm font-medium">387MB</span>
+                        </div>
+                        
+                        <!-- Action Buttons -->
+                        <div class="pt-4 border-t border-gray-800/50 space-y-2">
+                            <button class="w-full bg-primary-500/10 text-primary-400 py-2 px-3 rounded-lg text-sm hover:bg-primary-500/20 transition-colors">
+                                <i class="fas fa-refresh mr-2"></i>Refresh Stats
+                            </button>
+                            <button class="w-full bg-gray-800/40 text-gray-400 py-2 px-3 rounded-lg text-sm hover:bg-gray-800/60 transition-colors">
+                                <i class="fas fa-cog mr-2"></i>Settings
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
             <!-- Charts and Activity Feed -->
             <div class="grid grid-cols-1 xl:grid-cols-3 gap-6 mb-6">
                 <!-- Execution Chart -->
                 <div class="xl:col-span-2 glass-effect rounded-xl overflow-hidden shadow-sm transition-all duration-300 hover:shadow-lg">
                     <div class="p-4 border-b border-gray-800/50 flex items-center justify-between">
-                        <h2 class="text-lg font-semibold">Execution Activity</h2>
+                        <h2 class="text-lg font-semibold">Workflow Executions</h2>
                         <div class="flex items-center space-x-2">
-                            <button class="text-xs px-3 py-1 rounded-lg bg-gray-800/60 text-gray-300 hover:bg-gray-800/80">Weekly</button>
-                            <button class="text-xs px-3 py-1 rounded-lg text-gray-400 hover:bg-gray-800/60">Monthly</button>
-                            <button class="text-xs px-3 py-1 rounded-lg text-gray-400 hover:bg-gray-800/60">Custom</button>
+                            <button class="text-xs px-3 py-1 rounded-lg bg-gray-800/60 text-gray-300 hover:bg-gray-800/80 border border-gray-700/50">Weekly</button>
+                            <button class="text-xs px-3 py-1 rounded-lg text-gray-400 hover:bg-gray-800/60 border border-transparent hover:border-gray-700/50 transition-all">Monthly</button>
+                            <button class="text-xs px-3 py-1 rounded-lg text-gray-400 hover:bg-gray-800/60 border border-transparent hover:border-gray-700/50 transition-all">Custom</button>
+                            <div class="w-px h-4 bg-gray-700"></div>
+                            <button class="text-xs px-3 py-1 rounded-lg bg-primary-500/10 text-primary-400 hover:bg-primary-500/20 transition-colors">
+                                <i class="fas fa-download mr-1"></i>Export
+                            </button>
                         </div>
                     </div>
                     <div class="p-6">
@@ -491,45 +768,55 @@
                                         <div class="bg-gradient-to-t from-primary-500 to-primary-400 rounded-t-lg w-3/4 h-5/6 mb-2 transition-all duration-300 group-hover:h-full"></div>
                                         <div class="bg-gradient-to-t from-accent-600 to-accent-500 rounded-t-lg w-3/4 h-1/6 mb-2 transition-all duration-300 group-hover:h-1/4"></div>
                                         <div class="text-xs text-gray-500 whitespace-nowrap">Wed</div>
-                                        <div class="chart-tooltip opacity-0 group-hover:opacity-100 absolute -top-16 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs rounded-lg py-2 px-3 whitespace-nowrap z-10 pointer-events-none transition-opacity duration-200">Wed: 294 runs<br>15 failed</div>
+                                        <div class="chart-tooltip opacity-0 group-hover:opacity-100 absolute -top-16 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs rounded-lg py-2 px-3 whitespace-nowrap z-10 pointer-events-none transition-opacity duration-200">Wed: 156 executions<br>8 failed</div>
                                     </div>
                                     <div class="group relative flex-1 flex flex-col items-center h-5/6 min-w-[60px]">
                                         <div class="bg-gradient-to-t from-primary-500 to-primary-400 rounded-t-lg w-3/4 h-2/3 mb-2 transition-all duration-300 group-hover:h-3/4"></div>
                                         <div class="bg-gradient-to-t from-accent-600 to-accent-500 rounded-t-lg w-3/4 h-1/4 mb-2 transition-all duration-300 group-hover:h-1/3"></div>
                                         <div class="text-xs text-gray-500 whitespace-nowrap">Thu</div>
-                                        <div class="chart-tooltip opacity-0 group-hover:opacity-100 absolute -top-16 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs rounded-lg py-2 px-3 whitespace-nowrap z-10 pointer-events-none transition-opacity duration-200">Thu: 201 runs<br>14 failed</div>
+                                        <div class="chart-tooltip opacity-0 group-hover:opacity-100 absolute -top-16 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs rounded-lg py-2 px-3 whitespace-nowrap z-10 pointer-events-none transition-opacity duration-200">Thu: 142 executions<br>6 failed</div>
                                     </div>
                                     <div class="group relative flex-1 flex flex-col items-center h-5/6 min-w-[60px]">
                                         <div class="bg-gradient-to-t from-primary-500 to-primary-400 rounded-t-lg w-3/4 h-1/2 mb-2 transition-all duration-300 group-hover:h-2/3"></div>
                                         <div class="bg-gradient-to-t from-accent-600 to-accent-500 rounded-t-lg w-3/4 h-1/3 mb-2 transition-all duration-300 group-hover:h-1/2"></div>
                                         <div class="text-xs text-gray-500 whitespace-nowrap">Fri</div>
-                                        <div class="chart-tooltip opacity-0 group-hover:opacity-100 absolute -top-16 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs rounded-lg py-2 px-3 whitespace-nowrap z-10 pointer-events-none transition-opacity duration-200">Fri: 174 runs<br>11 failed</div>
+                                        <div class="chart-tooltip opacity-0 group-hover:opacity-100 absolute -top-16 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs rounded-lg py-2 px-3 whitespace-nowrap z-10 pointer-events-none transition-opacity duration-200">Fri: 189 executions<br>12 failed</div>
                                     </div>
                                     <div class="group relative flex-1 flex flex-col items-center h-5/6 min-w-[60px]">
                                         <div class="bg-gradient-to-t from-primary-500 to-primary-400 rounded-t-lg w-3/4 h-1/3 mb-2 transition-all duration-300 group-hover:h-1/2"></div>
                                         <div class="bg-gradient-to-t from-accent-600 to-accent-500 rounded-t-lg w-3/4 h-1/4 mb-2 transition-all duration-300 group-hover:h-1/3"></div>
                                         <div class="text-xs text-gray-500 whitespace-nowrap">Sat</div>
-                                        <div class="chart-tooltip opacity-0 group-hover:opacity-100 absolute -top-16 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs rounded-lg py-2 px-3 whitespace-nowrap z-10 pointer-events-none transition-opacity duration-200">Sat: 112 runs<br>7 failed</div>
+                                        <div class="chart-tooltip opacity-0 group-hover:opacity-100 absolute -top-16 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs rounded-lg py-2 px-3 whitespace-nowrap z-10 pointer-events-none transition-opacity duration-200">Sat: 98 executions<br>4 failed</div>
                                     </div>
                                     <div class="group relative flex-1 flex flex-col items-center h-5/6 min-w-[60px]">
                                         <div class="bg-gradient-to-t from-primary-500 to-primary-400 rounded-t-lg w-3/4 h-1/4 mb-2 transition-all duration-300 group-hover:h-1/3"></div>
                                         <div class="bg-gradient-to-t from-accent-600 to-accent-500 rounded-t-lg w-3/4 h-1/5 mb-2 transition-all duration-300 group-hover:h-1/4"></div>
                                         <div class="text-xs text-gray-500 whitespace-nowrap">Sun</div>
-                                        <div class="chart-tooltip opacity-0 group-hover:opacity-100 absolute -top-16 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs rounded-lg py-2 px-3 whitespace-nowrap z-10 pointer-events-none transition-opacity duration-200">Sun: 97 runs<br>4 failed</div>
+                                        <div class="chart-tooltip opacity-0 group-hover:opacity-100 absolute -top-16 left-1/2 transform -translate-x-1/2 bg-gray-800 text-white text-xs rounded-lg py-2 px-3 whitespace-nowrap z-10 pointer-events-none transition-opacity duration-200">Sun: 73 executions<br>2 failed</div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div class="px-6 pb-4 flex items-center justify-between border-t border-gray-800/50">
-                        <div class="flex items-center space-x-4">
-                            <div class="flex items-center">
-                                <div class="w-3 h-3 rounded-full bg-primary-500 mr-2"></div>
-                                <span class="text-xs text-gray-400">Successful</span>
+                        <div class="flex items-center space-x-6">
+                            <div class="flex items-center space-x-4">
+                                <div class="flex items-center">
+                                    <div class="w-3 h-3 rounded-full bg-primary-500 mr-2"></div>
+                                    <span class="text-xs text-gray-400">Successful (812)</span>
+                                </div>
+                                <div class="flex items-center">
+                                    <div class="w-3 h-3 rounded-full bg-accent-500 mr-2"></div>
+                                    <span class="text-xs text-gray-400">Failed (35)</span>
+                                </div>
                             </div>
-                            <div class="flex items-center">
-                                <div class="w-3 h-3 rounded-full bg-accent-500 mr-2"></div>
-                                <span class="text-xs text-gray-400">Failed</span>
+                            <div class="flex items-center space-x-2">
+                                <button class="text-xs bg-green-500/10 text-green-400 px-2 py-1 rounded hover:bg-green-500/20 transition-colors">
+                                    <i class="fas fa-redo mr-1"></i>Retry Failures
+                                </button>
+                                <button class="text-xs bg-blue-500/10 text-blue-400 px-2 py-1 rounded hover:bg-blue-500/20 transition-colors">
+                                    <i class="fas fa-filter mr-1"></i>Filter
+                                </button>
                             </div>
                         </div>
                         <button class="text-sm text-primary-400 hover:text-primary-300 flex items-center transition-colors duration-200">
@@ -542,10 +829,18 @@
                 <!-- Activity Feed -->
                 <div class="glass-effect rounded-xl overflow-hidden shadow-sm transition-all duration-300 hover:shadow-lg">
                     <div class="p-4 border-b border-gray-800/50 flex items-center justify-between">
-                        <h2 class="text-lg font-semibold">Recent Activity</h2>
-                        <button class="text-sm text-primary-400 hover:text-primary-300 transition-colors duration-200">
-                            View All
-                        </button>
+                        <h2 class="text-lg font-semibold">Recent Workflow Activity</h2>
+                        <div class="flex items-center space-x-2">
+                            <button class="text-xs px-2 py-1 rounded bg-gray-800/40 text-gray-400 hover:bg-gray-800/60 transition-colors">
+                                <i class="fas fa-filter mr-1"></i>All
+                            </button>
+                            <button class="text-xs px-2 py-1 rounded text-gray-500 hover:bg-gray-800/40 transition-colors">
+                                Errors
+                            </button>
+                            <button class="text-sm text-primary-400 hover:text-primary-300 transition-colors duration-200">
+                                View All
+                            </button>
+                        </div>
                     </div>
                     <div class="overflow-y-auto max-h-[26rem]">
                         <!-- Activity Item -->
@@ -555,9 +850,21 @@
                             </div>
                             <div class="ml-3 flex-1">
                                 <p class="text-sm">
-                                    <span class="font-medium">Lead Processing</span> workflow completed successfully in 1.4s
+                                    <span class="font-medium">Email Automation</span> workflow completed successfully in 2.1s
                                 </p>
-                                <p class="text-xs text-gray-500 mt-1">2 minutes ago</p>
+                                <div class="flex items-center mt-1 space-x-2">
+                                    <p class="text-xs text-gray-500">2 minutes ago</p>
+                                    <span class="text-xs bg-green-500/10 text-green-400 px-2 py-0.5 rounded">Success</span>
+                                    <button class="text-xs text-primary-400 hover:text-primary-300">View Details</button>
+                                </div>
+                            </div>
+                            <div class="flex items-center space-x-2">
+                                <button class="text-gray-500 hover:text-primary-400 transition-colors" title="View Execution">
+                                    <i class="fas fa-eye text-sm"></i>
+                                </button>
+                                <button class="text-gray-500 hover:text-green-400 transition-colors" title="Restart">
+                                    <i class="fas fa-redo text-sm"></i>
+                                </button>
                             </div>
                         </div>
                         
@@ -568,13 +875,22 @@
                             </div>
                             <div class="ml-3 flex-1">
                                 <p class="text-sm">
-                                    <span class="font-medium">Data Sync</span> workflow is currently running (8m 32s)
+                                    <span class="font-medium">Database Backup</span> workflow is currently running (12m 47s)
                                 </p>
-                                <p class="text-xs text-gray-500 mt-1">8 minutes ago</p>
+                                <div class="flex items-center mt-1 space-x-2">
+                                    <p class="text-xs text-gray-500">8 minutes ago</p>
+                                    <span class="text-xs bg-yellow-500/10 text-yellow-400 px-2 py-0.5 rounded">Running</span>
+                                    <button class="text-xs text-primary-400 hover:text-primary-300">Monitor</button>
+                                </div>
                             </div>
-                            <a href="#" class="text-gray-500 hover:text-primary-400 transition-colors duration-200">
-                                <i class="fas fa-external-link-alt text-sm"></i>
-                            </a>
+                            <div class="flex items-center space-x-2">
+                                <a href="http://localhost:5678" target="_blank" class="text-gray-500 hover:text-primary-400 transition-colors" title="Open in Ojital Ai">
+                                    <i class="fas fa-external-link-alt text-sm"></i>
+                                </a>
+                                <button class="text-gray-500 hover:text-red-400 transition-colors" title="Stop Execution">
+                                    <i class="fas fa-stop text-sm"></i>
+                                </button>
+                            </div>
                         </div>
                         
                         <!-- Activity Item -->
@@ -584,7 +900,7 @@
                             </div>
                             <div class="ml-3 flex-1">
                                 <p class="text-sm">
-                                    <span class="font-medium">Email Campaign</span> sent to 4,382 recipients in 3.2s
+                                    <span class="font-medium">Slack Notification</span> sent to #general channel in 0.8s
                                 </p>
                                 <p class="text-xs text-gray-500 mt-1">15 minutes ago</p>
                             </div>
@@ -597,13 +913,22 @@
                             </div>
                             <div class="ml-3 flex-1">
                                 <p class="text-sm">
-                                    <span class="font-medium">Invoice Processing</span> failed due to invalid data format
+                                    <span class="font-medium">API Data Sync</span> failed due to rate limiting
                                 </p>
-                                <p class="text-xs text-gray-500 mt-1">22 minutes ago</p>
+                                <div class="flex items-center mt-1 space-x-2">
+                                    <p class="text-xs text-gray-500">22 minutes ago</p>
+                                    <span class="text-xs bg-red-500/10 text-red-400 px-2 py-0.5 rounded">Failed</span>
+                                    <button class="text-xs text-red-400 hover:text-red-300">View Error</button>
+                                </div>
                             </div>
-                            <button class="text-gray-500 hover:text-primary-400 transition-colors duration-200" data-tooltip="Retry">
-                                <i class="fas fa-redo text-sm"></i>
-                            </button>
+                            <div class="flex items-center space-x-2">
+                                <button class="text-gray-500 hover:text-primary-400 transition-colors" title="View Execution" data-tooltip="Retry">
+                                    <i class="fas fa-redo text-sm"></i>
+                                </button>
+                                <button class="text-gray-500 hover:text-blue-400 transition-colors" title="Edit Workflow">
+                                    <i class="fas fa-edit text-sm"></i>
+                                </button>
+                            </div>
                         </div>
                         
                         <!-- Activity Item -->
@@ -613,7 +938,7 @@
                             </div>
                             <div class="ml-3 flex-1">
                                 <p class="text-sm">
-                                    <span class="font-medium">CRM Sync</span> updated 142 records in 4.8s
+                                    <span class="font-medium">Google Sheets Update</span> processed 87 rows in 1.2s
                                 </p>
                                 <p class="text-xs text-gray-500 mt-1">45 minutes ago</p>
                             </div>
@@ -626,7 +951,7 @@
                             </div>
                             <div class="ml-3 flex-1">
                                 <p class="text-sm">
-                                    <span class="font-medium">System Alert:</span> Storage usage is at 87%
+                                    <span class="font-medium">Ojital Ai System:</span> Webhook endpoint created successfully
                                 </p>
                                 <p class="text-xs text-gray-500 mt-1">1 hour ago</p>
                             </div>
@@ -643,19 +968,25 @@
                 <!-- Top Workflows -->
                 <div class="glass-effect rounded-xl overflow-hidden shadow-sm transition-all duration-300 hover:shadow-lg">
                     <div class="p-4 border-b border-gray-800/50 flex items-center justify-between">
-                        <h2 class="text-lg font-semibold">Top Workflows</h2>
-                        <button class="text-sm text-primary-400 hover:text-primary-300 transition-colors duration-200">
-                            View All
-                        </button>
+                        <h2 class="text-lg font-semibold">Top Ojital Ai Workflows</h2>
+                        <div class="flex items-center space-x-2">
+                            <button class="text-xs px-2 py-1 rounded bg-gray-800/40 text-gray-400 hover:bg-gray-800/60 transition-colors">
+                                <i class="fas fa-sort mr-1"></i>Sort by Executions
+                            </button>
+                            <button class="text-sm text-primary-400 hover:text-primary-300 transition-colors duration-200">
+                                Manage All
+                            </button>
+                        </div>
                     </div>
                     <div class="overflow-y-auto">
                         <table class="w-full">
                             <thead>
                                 <tr class="text-xs text-gray-500 border-b border-gray-800/50">
                                     <th class="px-4 py-3 text-left">Workflow</th>
-                                    <th class="px-4 py-3 text-center">Runs</th>
+                                    <th class="px-4 py-3 text-center">Executions</th>
                                     <th class="px-4 py-3 text-center">Success</th>
                                     <th class="px-4 py-3 text-right">Avg Time</th>
+                                    <th class="px-4 py-3 text-center">Actions</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -666,18 +997,31 @@
                                                 <i class="fas fa-envelope text-white text-xs"></i>
                                             </div>
                                             <div>
-                                                <p class="text-sm font-medium">Email Campaigns</p>
-                                                <p class="text-xs text-gray-500">Marketing</p>
+                                                <p class="text-sm font-medium">Email Automation</p>
+                                                <p class="text-xs text-gray-500">Gmail + Slack</p>
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="px-4 py-3 text-center text-sm">428</td>
+                                    <td class="px-4 py-3 text-center text-sm">156</td>
                                     <td class="px-4 py-3 text-center">
                                         <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-green-500/10 text-green-400">
                                             <i class="fas fa-check-circle mr-1"></i> 100%
                                         </span>
                                     </td>
-                                    <td class="px-4 py-3 text-right text-sm">1.2s</td>
+                                    <td class="px-4 py-3 text-right text-sm">2.1s</td>
+                                    <td class="px-4 py-3 text-center">
+                                        <div class="flex items-center justify-center space-x-1">
+                                            <button class="text-green-400 hover:text-green-300 transition-colors" title="Start Workflow">
+                                                <i class="fas fa-play text-xs"></i>
+                                            </button>
+                                            <button class="text-blue-400 hover:text-blue-300 transition-colors" title="Edit Workflow">
+                                                <i class="fas fa-edit text-xs"></i>
+                                            </button>
+                                            <button class="text-purple-400 hover:text-purple-300 transition-colors" title="View Details">
+                                                <i class="fas fa-eye text-xs"></i>
+                                            </button>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr class="border-b border-gray-800/50 hover:bg-gray-800/30 transition-colors duration-150 animate-fade-in">
                                     <td class="px-4 py-3">
@@ -686,18 +1030,31 @@
                                                 <i class="fas fa-database text-white text-xs"></i>
                                             </div>
                                             <div>
-                                                <p class="text-sm font-medium">CRM Sync</p>
-                                                <p class="text-xs text-gray-500">Data</p>
+                                                <p class="text-sm font-medium">Database Backup</p>
+                                                <p class="text-xs text-gray-500">MySQL + S3</p>
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="px-4 py-3 text-center text-sm">392</td>
+                                    <td class="px-4 py-3 text-center text-sm">98</td>
                                     <td class="px-4 py-3 text-center">
                                         <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-green-500/10 text-green-400">
                                             <i class="fas fa-check-circle mr-1"></i> 99.8%
                                         </span>
                                     </td>
-                                    <td class="px-4 py-3 text-right text-sm">4.8s</td>
+                                    <td class="px-4 py-3 text-right text-sm">8.3s</td>
+                                    <td class="px-4 py-3 text-center">
+                                        <div class="flex items-center justify-center space-x-1">
+                                            <button class="text-gray-500 hover:text-gray-400 transition-colors" title="Workflow Running">
+                                                <i class="fas fa-pause text-xs"></i>
+                                            </button>
+                                            <button class="text-blue-400 hover:text-blue-300 transition-colors" title="Edit Workflow">
+                                                <i class="fas fa-edit text-xs"></i>
+                                            </button>
+                                            <button class="text-purple-400 hover:text-purple-300 transition-colors" title="View Details">
+                                                <i class="fas fa-eye text-xs"></i>
+                                            </button>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr class="border-b border-gray-800/50 hover:bg-gray-800/30 transition-colors duration-150 animate-fade-in">
                                     <td class="px-4 py-3">
@@ -706,18 +1063,31 @@
                                                 <i class="fas fa-file-invoice-dollar text-white text-xs"></i>
                                             </div>
                                             <div>
-                                                <p class="text-sm font-medium">Invoice Processing</p>
-                                                <p class="text-xs text-gray-500">Finance</p>
+                                                <p class="text-sm font-medium">API Data Sync</p>
+                                                <p class="text-xs text-gray-500">REST + Webhook</p>
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="px-4 py-3 text-center text-sm">351</td>
+                                    <td class="px-4 py-3 text-center text-sm">89</td>
                                     <td class="px-4 py-3 text-center">
                                         <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-red-500/10 text-red-400">
-                                            <i class="fas fa-exclamation-circle mr-1"></i> 95.1%
+                                            <i class="fas fa-exclamation-circle mr-1"></i> 91.0%
                                         </span>
                                     </td>
-                                    <td class="px-4 py-3 text-right text-sm">3.5s</td>
+                                    <td class="px-4 py-3 text-right text-sm">4.7s</td>
+                                    <td class="px-4 py-3 text-center">
+                                        <div class="flex items-center justify-center space-x-1">
+                                            <button class="text-red-400 hover:text-red-300 transition-colors" title="Fix Issues">
+                                                <i class="fas fa-wrench text-xs"></i>
+                                            </button>
+                                            <button class="text-blue-400 hover:text-blue-300 transition-colors" title="Edit Workflow">
+                                                <i class="fas fa-edit text-xs"></i>
+                                            </button>
+                                            <button class="text-yellow-400 hover:text-yellow-300 transition-colors" title="Retry Failed">
+                                                <i class="fas fa-redo text-xs"></i>
+                                            </button>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr class="border-b border-gray-800/50 hover:bg-gray-800/30 transition-colors duration-150 animate-fade-in">
                                     <td class="px-4 py-3">
@@ -726,18 +1096,31 @@
                                                 <i class="fas fa-users text-white text-xs"></i>
                                             </div>
                                             <div>
-                                                <p class="text-sm font-medium">Lead Processing</p>
-                                                <p class="text-xs text-gray-500">Sales</p>
+                                                <p class="text-sm font-medium">Slack Notifications</p>
+                                                <p class="text-xs text-gray-500">Webhook + Slack</p>
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="px-4 py-3 text-center text-sm">287</td>
+                                    <td class="px-4 py-3 text-center text-sm">67</td>
                                     <td class="px-4 py-3 text-center">
                                         <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-green-500/10 text-green-400">
-                                            <i class="fas fa-check-circle mr-1"></i> 99.3%
+                                            <i class="fas fa-check-circle mr-1"></i> 97.0%
                                         </span>
                                     </td>
-                                    <td class="px-4 py-3 text-right text-sm">1.4s</td>
+                                    <td class="px-4 py-3 text-right text-sm">0.8s</td>
+                                    <td class="px-4 py-3 text-center">
+                                        <div class="flex items-center justify-center space-x-1">
+                                            <button class="text-green-400 hover:text-green-300 transition-colors" title="Start Workflow">
+                                                <i class="fas fa-play text-xs"></i>
+                                            </button>
+                                            <button class="text-blue-400 hover:text-blue-300 transition-colors" title="Edit Workflow">
+                                                <i class="fas fa-edit text-xs"></i>
+                                            </button>
+                                            <button class="text-purple-400 hover:text-purple-300 transition-colors" title="View Details">
+                                                <i class="fas fa-eye text-xs"></i>
+                                            </button>
+                                        </div>
+                                    </td>
                                 </tr>
                                 <tr class="hover:bg-gray-800/30 transition-colors duration-150 animate-fade-in">
                                     <td class="px-4 py-3">
@@ -746,18 +1129,31 @@
                                                 <i class="fas fa-cloud-upload-alt text-white text-xs"></i>
                                             </div>
                                             <div>
-                                                <p class="text-sm font-medium">Data Backup</p>
-                                                <p class="text-xs text-gray-500">Operations</p>
+                                                <p class="text-sm font-medium">Google Sheets Sync</p>
+                                                <p class="text-xs text-gray-500">Sheets + HTTP</p>
                                             </div>
                                         </div>
                                     </td>
-                                    <td class="px-4 py-3 text-center text-sm">182</td>
+                                    <td class="px-4 py-3 text-center text-sm">43</td>
                                     <td class="px-4 py-3 text-center">
                                         <span class="inline-flex items-center px-2 py-0.5 rounded-full text-xs font-medium bg-green-500/10 text-green-400">
-                                            <i class="fas fa-check-circle mr-1"></i> 98.9%
+                                            <i class="fas fa-check-circle mr-1"></i> 100%
                                         </span>
                                     </td>
-                                    <td class="px-4 py-3 text-right text-sm">12.8s</td>
+                                    <td class="px-4 py-3 text-right text-sm">1.2s</td>
+                                    <td class="px-4 py-3 text-center">
+                                        <div class="flex items-center justify-center space-x-1">
+                                            <button class="text-green-400 hover:text-green-300 transition-colors" title="Start Workflow">
+                                                <i class="fas fa-play text-xs"></i>
+                                            </button>
+                                            <button class="text-blue-400 hover:text-blue-300 transition-colors" title="Edit Workflow">
+                                                <i class="fas fa-edit text-xs"></i>
+                                            </button>
+                                            <button class="text-purple-400 hover:text-purple-300 transition-colors" title="View Details">
+                                                <i class="fas fa-eye text-xs"></i>
+                                            </button>
+                                        </div>
+                                    </td>
                                 </tr>
                             </tbody>
                         </table>
@@ -767,7 +1163,7 @@
                 <!-- System Health -->
                 <div class="glass-effect rounded-xl overflow-hidden shadow-sm transition-all duration-300 hover:shadow-lg">
                     <div class="p-4 border-b border-gray-800/50 flex items-center justify-between">
-                        <h2 class="text-lg font-semibold">System Health</h2>
+                        <h2 class="text-lg font-semibold">Ojital Ai System Health</h2>
                         <button class="text-sm text-primary-400 hover:text-primary-300 transition-colors duration-200">
                             View Details
                         </button>
@@ -837,31 +1233,31 @@
                         <div class="space-y-4">
                             <div>
                                 <div class="flex items-center justify-between mb-1">
-                                    <span class="text-sm text-gray-400">Storage Usage</span>
-                                    <span class="text-xs font-medium">512GB / 1TB</span>
+                                    <span class="text-sm text-gray-400">Workflow Storage</span>
+                                    <span class="text-xs font-medium">247MB / 2GB</span>
                                 </div>
                                 <div class="w-full bg-gray-800 rounded-full h-2">
-                                    <div class="bg-primary-500 h-2 rounded-full" style="width: 51.2%"></div>
+                                    <div class="bg-primary-500 h-2 rounded-full" style="width: 12.4%"></div>
                                 </div>
                             </div>
                             
                             <div>
                                 <div class="flex items-center justify-between mb-1">
-                                    <span class="text-sm text-gray-400">Network In</span>
-                                    <span class="text-xs font-medium">12.8 MB/s</span>
+                                    <span class="text-sm text-gray-400">Webhook Requests</span>
+                                    <span class="text-xs font-medium">45 req/min</span>
                                 </div>
                                 <div class="w-full bg-gray-800 rounded-full h-2">
-                                    <div class="bg-teal-500 h-2 rounded-full" style="width: 36%"></div>
+                                    <div class="bg-teal-500 h-2 rounded-full" style="width: 60%"></div>
                                 </div>
                             </div>
                             
                             <div>
                                 <div class="flex items-center justify-between mb-1">
-                                    <span class="text-sm text-gray-400">Network Out</span>
-                                    <span class="text-xs font-medium">5.4 MB/s</span>
+                                    <span class="text-sm text-gray-400">Active Connections</span>
+                                    <span class="text-xs font-medium">18 connections</span>
                                 </div>
                                 <div class="w-full bg-gray-800 rounded-full h-2">
-                                    <div class="bg-purple-500 h-2 rounded-full" style="width: 22%"></div>
+                                    <div class="bg-purple-500 h-2 rounded-full" style="width: 45%"></div>
                                 </div>
                             </div>
                         </div>
@@ -869,7 +1265,7 @@
                         <!-- Alerts Section -->
                         <div class="mt-6 pt-6 border-t border-gray-800/50">
                             <div class="flex items-center justify-between mb-2">
-                                <h3 class="text-sm font-medium">Recent Alerts</h3>
+                                <h3 class="text-sm font-medium">Ojital Ai Alerts</h3>
                                 <span class="text-xs text-gray-500">Last 24h</span>
                             </div>
                             
@@ -880,7 +1276,7 @@
                                         <div class="w-2 h-2 rounded-full bg-yellow-500 animate-pulse"></div>
                                     </div>
                                     <div class="ml-3 flex-1">
-                                        <p class="text-xs text-yellow-400">Increased CPU usage detected (83%)</p>
+                                        <p class="text-xs text-yellow-400">3 workflows failed due to rate limiting</p>
                                         <p class="text-xs text-gray-500 mt-0.5">1 hour ago</p>
                                     </div>
                                 </div>
@@ -891,7 +1287,7 @@
                                         <div class="w-2 h-2 rounded-full bg-gray-500"></div>
                                     </div>
                                     <div class="ml-3 flex-1">
-                                        <p class="text-xs text-gray-400">System backup completed</p>
+                                        <p class="text-xs text-gray-400">Workflow backup completed successfully</p>
                                         <p class="text-xs text-gray-500 mt-0.5">3 hours ago</p>
                                     </div>
                                 </div>
@@ -902,7 +1298,7 @@
                                         <div class="w-2 h-2 rounded-full bg-blue-500"></div>
                                     </div>
                                     <div class="ml-3 flex-1">
-                                        <p class="text-xs text-blue-400">New version available: v2.1.5</p>
+                                        <p class="text-xs text-blue-400">Ojital Ai update available: v1.18.2</p>
                                         <p class="text-xs text-gray-500 mt-0.5">5 hours ago</p>
                                     </div>
                                 </div>
