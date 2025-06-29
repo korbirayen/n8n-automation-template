@@ -1,0 +1,457 @@
+<!-- [START OF WEBSITE TEMPLATE] -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Email-Telegram Automation Dashboard</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: {
+                extend: {
+                    colors: {
+                        primary: { 50: '#f0f9ff', 100: '#e0f2fe', 200: '#bae6fd', 300: '#7dd3fc', 400: '#38bdf8', 500: '#0ea5e9', 600: '#0284c7', 700: '#0369a1', 800: '#075985', 900: '#0c4a6e' },
+                        dark: '#0f172a',
+                        darker: '#020617',
+                        'dark-light': '#1e293b',
+                        accent: { 500: '#8b5cf6', 600: '#7c3aed', 900: '#4c1d95' },
+                        teal: { 500: '#2dd4bf', 600: '#0d9488', 900: '#134e4a' },
+                        purple: { 500: '#a855f7', 600: '#9333ea', 900: '#581c87' }
+                    },
+                    fontFamily: { sans: ['Inter', 'sans-serif'] }
+                }
+            }
+        }
+    </script>
+    <style>
+        .gradient-text { 
+            background-clip: text; 
+            -webkit-background-clip: text; 
+            color: transparent; 
+            background-image: linear-gradient(90deg, #3b82f6, #8b5cf6); 
+        }
+        .gradient-bg { 
+            background-image: linear-gradient(135deg, #0f172a, #1e293b); 
+        }
+        .glass-effect { 
+            background-color: rgba(17, 24, 39, 0.2); 
+            backdrop-filter: blur(16px); 
+            -webkit-backdrop-filter: blur(16px);
+            border: 1px solid rgba(31, 41, 55, 0.5); 
+        }
+        .card-hover { 
+            transition: all 0.3s ease-in-out; 
+        }
+        .card-hover:hover {
+            transform: translateY(-4px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+    </style>
+</head>
+<body class="font-sans antialiased bg-darker text-gray-200">
+    <div class="flex">
+        <!-- Sidebar -->
+        <div class="fixed inset-y-0 left-0 flex flex-col w-64 z-50 gradient-bg border-r border-gray-800/50 transition-transform duration-300 -translate-x-full md:translate-x-0" id="sidebar">
+            <div class="p-4 flex items-center justify-between border-b border-gray-800/50">
+                <div class="flex items-center space-x-3">
+                    <div class="w-10 h-10 rounded-lg flex items-center justify-center bg-gradient-to-br from-primary-500 to-accent-500 shadow-lg">
+                        <i class="fas fa-brain text-white text-lg"></i>
+                    </div>
+                    <div>
+                        <span class="text-lg font-bold gradient-text tracking-tight">Ojital Agents</span>
+                    </div>
+                </div>
+            </div>
+            <div class="flex-1 overflow-y-auto p-4">
+                <nav class="space-y-2">
+                    <div>
+                        <h3 class="text-xs uppercase tracking-wider text-gray-500 px-3 mb-3">Workflows</h3>
+                        <a href="#" class="flex items-center px-3 py-3 rounded-lg text-white hover:bg-gray-800/30 transition-colors duration-200 bg-gray-800/40 border border-gray-800/70">
+                            <i class="fas fa-play-circle text-primary-400 mr-3 text-lg"></i>
+                            <span class="font-medium">Active Workflows</span>
+                        </a>
+                        <a href="#" class="flex items-center px-3 py-3 rounded-lg text-gray-400 hover:bg-gray-800/30 hover:text-white transition-colors duration-200">
+                            <i class="fas fa-history text-gray-500 mr-3 text-lg"></i>
+                            <span>Execution History</span>
+                        </a>
+                        <a href="#" class="flex items-center px-3 py-3 rounded-lg text-gray-400 hover:bg-gray-800/30 hover:text-white transition-colors duration-200">
+                            <i class="fas fa-exclamation-triangle text-gray-500 mr-3 text-lg"></i>
+                            <span>Failed Executions</span>
+                        </a>
+                    </div>
+                </nav>
+            </div>
+        </div>
+
+        <!-- Main Content -->
+        <div class="md:ml-64 flex-1 flex flex-col h-screen">
+            <header class="glass-effect border-b border-gray-800/50 px-6 py-4 flex items-center justify-between sticky top-0 z-40">
+                 <div class="flex items-center">
+                    <button id="sidebar-toggle" class="md:hidden text-gray-400 hover:text-white mr-4">
+                        <i class="fas fa-bars text-xl"></i>
+                    </button>
+                    <h1 class="text-xl font-bold">Email-Telegram Automation</h1>
+                </div>
+                <div class="flex items-center space-x-4">
+                     <button class="relative p-2 text-gray-400 hover:text-white hover:bg-gray-800/50 rounded-xl transition-all duration-200">
+                        <i class="fas fa-bell"></i>
+                    </button>
+                    <button class="p-2 text-gray-400 hover:text-white hover:bg-gray-800/50 rounded-xl transition-all duration-200">
+                        <i class="fas fa-question-circle"></i>
+                    </button>
+                </div>
+            </header>
+            <main class="flex-1 overflow-y-auto p-6">
+                 <!-- Page Header -->
+                <div class="flex flex-col md:flex-row md:items-center justify-between mb-8">
+                    <div class="mb-4 md:mb-0">
+                        <h1 class="text-3xl font-bold flex items-center">
+                            <span class="gradient-text">Email-Telegram Automation Control</span>
+                        </h1>
+                        <p class="text-sm text-gray-400 mt-2">Monitor and control your email-to-Telegram automation workflows in real-time</p>
+                    </div>
+                    <div class="flex items-center space-x-3">
+                        <button class="flex items-center space-x-2 bg-gray-800/40 hover:bg-gray-800/60 border border-gray-800/50 px-3 py-2 rounded-xl text-sm transition-all duration-200 hover:shadow-sm">
+                            <i class="fas fa-calendar-alt text-gray-400 text-xs"></i>
+                            <span>Last 7 days</span>
+                            <i class="fas fa-chevron-down text-gray-400 text-xs"></i>
+                        </button>
+                        <button class="flex items-center space-x-2 bg-gradient-to-r from-primary-600 to-accent-600 hover:from-primary-500 hover:to-accent-500 text-white px-3 py-2 rounded-xl text-sm font-medium transition-all duration-200 shadow-md hover:shadow-lg hover:shadow-primary-500/30">
+                            <i class="fas fa-plus text-white text-xs"></i>
+                            <span>New Workflow</span>
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Email-Telegram Automation Stats -->
+                <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 mb-8">
+                    <!-- Total Emails Received -->
+                    <div class="glass-effect rounded-xl p-6 card-hover">
+                        <div class="flex items-start justify-between">
+                            <div>
+                                <p class="text-sm text-gray-400 mb-1">Total Emails Received</p>
+                                <h3 class="text-3xl font-semibold text-white">1,250</h3>
+                                <div class="flex items-center mt-2">
+                                    <span class="text-xs text-green-400 bg-green-400/10 px-2 py-1 rounded-full">+12% today</span>
+                                </div>
+                            </div>
+                            <div class="bg-primary-500/10 text-primary-400 p-3 rounded-xl">
+                                <i class="fas fa-envelope text-lg"></i>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <div class="h-1 w-full bg-gray-800 rounded-full">
+                                <div class="h-1 bg-gradient-to-r from-primary-500 to-primary-400 rounded-full" style="width: 85%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Important Emails Tagged -->
+                    <div class="glass-effect rounded-xl p-6 card-hover">
+                        <div class="flex items-start justify-between">
+                            <div>
+                                <p class="text-sm text-gray-400 mb-1">Emails Tagged "Important"</p>
+                                <h3 class="text-3xl font-semibold text-white">250</h3>
+                                <div class="flex items-center mt-2">
+                                    <span class="text-xs text-yellow-400 bg-yellow-400/10 px-2 py-1 rounded-full">20% of total</span>
+                                </div>
+                            </div>
+                            <div class="bg-accent-500/10 text-accent-400 p-3 rounded-xl">
+                                <i class="fas fa-tag text-lg"></i>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <div class="h-1 w-full bg-gray-800 rounded-full">
+                                <div class="h-1 bg-gradient-to-r from-accent-500 to-accent-400 rounded-full" style="width: 20%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Telegram Notifications Sent -->
+                    <div class="glass-effect rounded-xl p-6 card-hover">
+                        <div class="flex items-start justify-between">
+                            <div>
+                                <p class="text-sm text-gray-400 mb-1">Telegram Notifications Sent</p>
+                                <h3 class="text-3xl font-semibold text-white">245</h3>
+                                <div class="flex items-center mt-2">
+                                    <span class="text-xs text-teal-400 bg-teal-400/10 px-2 py-1 rounded-full">98% delivered</span>
+                                </div>
+                            </div>
+                            <div class="bg-teal-500/10 text-teal-400 p-3 rounded-xl">
+                                <i class="fab fa-telegram-plane text-lg"></i>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <div class="h-1 w-full bg-gray-800 rounded-full">
+                                <div class="h-1 bg-gradient-to-r from-teal-500 to-teal-400 rounded-full" style="width: 98%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Error Count -->
+                    <div class="glass-effect rounded-xl p-6 card-hover">
+                        <div class="flex items-start justify-between">
+                            <div>
+                                <p class="text-sm text-gray-400 mb-1">Error Count</p>
+                                <h3 class="text-3xl font-semibold text-white">5</h3>
+                                <div class="flex items-center mt-2">
+                                    <span class="text-xs text-red-400 bg-red-400/10 px-2 py-1 rounded-full">2% error rate</span>
+                                </div>
+                            </div>
+                            <div class="bg-red-500/10 text-red-400 p-3 rounded-xl">
+                                <i class="fas fa-exclamation-triangle text-lg"></i>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <div class="h-1 w-full bg-gray-800 rounded-full">
+                                <div class="h-1 bg-gradient-to-r from-red-500 to-red-400 rounded-full" style="width: 2%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Success Rate -->
+                    <div class="glass-effect rounded-xl p-6 card-hover">
+                        <div class="flex items-start justify-between">
+                            <div>
+                                <p class="text-sm text-gray-400 mb-1">Success Rate</p>
+                                <h3 class="text-3xl font-semibold text-white">98%</h3>
+                                <div class="flex items-center mt-2">
+                                    <span class="text-xs text-green-400 bg-green-400/10 px-2 py-1 rounded-full">Excellent</span>
+                                </div>
+                            </div>
+                            <div class="bg-green-500/10 text-green-400 p-3 rounded-xl">
+                                <i class="fas fa-check-circle text-lg"></i>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <div class="h-1 w-full bg-gray-800 rounded-full">
+                                <div class="h-1 bg-gradient-to-r from-green-500 to-green-400 rounded-full" style="width: 98%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Average Processing Time -->
+                    <div class="glass-effect rounded-xl p-6 card-hover">
+                        <div class="flex items-start justify-between">
+                            <div>
+                                <p class="text-sm text-gray-400 mb-1">Avg Processing Time</p>
+                                <h3 class="text-3xl font-semibold text-white">1.2s</h3>
+                                <div class="flex items-center mt-2">
+                                    <span class="text-xs text-purple-400 bg-purple-400/10 px-2 py-1 rounded-full">Fast response</span>
+                                </div>
+                            </div>
+                            <div class="bg-purple-500/10 text-purple-400 p-3 rounded-xl">
+                                <i class="fas fa-tachometer-alt text-lg"></i>
+                            </div>
+                        </div>
+                        <div class="mt-4">
+                            <div class="h-1 w-full bg-gray-800 rounded-full">
+                                <div class="h-1 bg-gradient-to-r from-purple-500 to-purple-400 rounded-full" style="width: 90%"></div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Last Successful Execution -->
+                    <div class="glass-effect rounded-xl p-6 card-hover">
+                        <div class="flex items-start justify-between">
+                            <div>
+                                <p class="text-sm text-gray-400 mb-1">Last Successful Run</p>
+                                <h3 class="text-xl font-semibold text-white">10:30 AM</h3>
+                                <p class="text-xs text-gray-500 mt-1">March 8, 2024</p>
+                                <div class="flex items-center mt-2">
+                                    <span class="text-xs text-green-400 bg-green-400/10 px-2 py-1 rounded-full">
+                                        <i class="fas fa-circle text-green-400 text-xs mr-1"></i>Active
+                                    </span>
+                                </div>
+                            </div>
+                            <div class="bg-green-500/10 text-green-400 p-3 rounded-xl">
+                                <i class="fas fa-check text-lg"></i>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Last Failed Execution -->
+                    <div class="glass-effect rounded-xl p-6 card-hover">
+                        <div class="flex items-start justify-between">
+                            <div>
+                                <p class="text-sm text-gray-400 mb-1">Last Failed Run</p>
+                                <h3 class="text-xl font-semibold text-white">09:45 AM</h3>
+                                <p class="text-xs text-gray-500 mt-1">March 8, 2024</p>
+                                <div class="flex items-center mt-2">
+                                    <button class="text-xs text-red-400 bg-red-400/10 hover:bg-red-400/20 px-2 py-1 rounded-full transition-colors">
+                                        <i class="fas fa-eye text-red-400 text-xs mr-1"></i>View Error
+                                    </button>
+                                </div>
+                            </div>
+                            <div class="bg-red-500/10 text-red-400 p-3 rounded-xl">
+                                <i class="fas fa-times text-lg"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Additional Controls Section -->
+                <div class="grid grid-cols-1 lg:grid-cols-2 gap-6 mb-8">
+                    <!-- Workflow Control Panel -->
+                    <div class="glass-effect rounded-xl p-6">
+                        <div class="flex items-center justify-between mb-4">
+                            <h3 class="text-lg font-semibold text-white">Workflow Controls</h3>
+                            <div class="flex items-center space-x-2">
+                                <div class="w-2 h-2 bg-green-400 rounded-full animate-pulse"></div>
+                                <span class="text-xs text-green-400">Running</span>
+                            </div>
+                        </div>
+                        <div class="space-y-3">
+                            <button class="w-full flex items-center justify-center space-x-2 bg-green-600/20 hover:bg-green-600/30 border border-green-600/50 text-green-400 px-4 py-3 rounded-lg transition-all duration-200">
+                                <i class="fas fa-play"></i>
+                                <span>Start Workflow</span>
+                            </button>
+                            <button class="w-full flex items-center justify-center space-x-2 bg-red-600/20 hover:bg-red-600/30 border border-red-600/50 text-red-400 px-4 py-3 rounded-lg transition-all duration-200">
+                                <i class="fas fa-stop"></i>
+                                <span>Stop Workflow</span>
+                            </button>
+                            <button class="w-full flex items-center justify-center space-x-2 bg-blue-600/20 hover:bg-blue-600/30 border border-blue-600/50 text-blue-400 px-4 py-3 rounded-lg transition-all duration-200">
+                                <i class="fas fa-redo"></i>
+                                <span>Restart Workflow</span>
+                            </button>
+                        </div>
+                    </div>
+
+                    <!-- Real-time Activity Feed -->
+                    <div class="glass-effect rounded-xl p-6">
+                        <h3 class="text-lg font-semibold text-white mb-4">Recent Activity</h3>
+                        <div class="space-y-3 max-h-48 overflow-y-auto">
+                            <div class="flex items-start space-x-3 p-3 bg-gray-800/30 rounded-lg">
+                                <div class="w-2 h-2 bg-green-400 rounded-full mt-2"></div>
+                                <div class="flex-1 min-w-0">
+                                    <p class="text-sm text-white">Email processed successfully</p>
+                                    <p class="text-xs text-gray-400">From: john@example.com - 2 min ago</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3 p-3 bg-gray-800/30 rounded-lg">
+                                <div class="w-2 h-2 bg-teal-400 rounded-full mt-2"></div>
+                                <div class="flex-1 min-w-0">
+                                    <p class="text-sm text-white">Telegram notification sent</p>
+                                    <p class="text-xs text-gray-400">To: @automation_channel - 2 min ago</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3 p-3 bg-gray-800/30 rounded-lg">
+                                <div class="w-2 h-2 bg-purple-400 rounded-full mt-2"></div>
+                                <div class="flex-1 min-w-0">
+                                    <p class="text-sm text-white">Email tagged as important</p>
+                                    <p class="text-xs text-gray-400">Priority: High - 5 min ago</p>
+                                </div>
+                            </div>
+                            <div class="flex items-start space-x-3 p-3 bg-gray-800/30 rounded-lg">
+                                <div class="w-2 h-2 bg-green-400 rounded-full mt-2"></div>
+                                <div class="flex-1 min-w-0">
+                                    <p class="text-sm text-white">Workflow execution completed</p>
+                                    <p class="text-xs text-gray-400">Duration: 1.2s - 8 min ago</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </main>
+        </div>
+    </div>
+    <script>
+        document.getElementById('sidebar-toggle').addEventListener('click', function() {
+            document.getElementById('sidebar').classList.toggle('-translate-x-full');
+        });
+
+        // Auto-refresh functionality for real-time updates
+        function updateMetrics() {
+            // Simulate real-time data updates
+            const metrics = [
+                { id: 'emails-received', baseValue: 1250, variance: 20 },
+                { id: 'important-emails', baseValue: 250, variance: 5 },
+                { id: 'telegram-sent', baseValue: 245, variance: 3 },
+                { id: 'errors', baseValue: 5, variance: 2 }
+            ];
+            
+            // Update timestamp
+            const now = new Date();
+            const timeString = now.toLocaleTimeString('en-US', { 
+                hour: '2-digit', 
+                minute: '2-digit',
+                hour12: true 
+            });
+            document.querySelector('[data-last-update]')?.setAttribute('data-last-update', timeString);
+        }
+
+        // Auto-refresh every 30 seconds
+        setInterval(updateMetrics, 30000);
+
+        // Add click handlers for workflow controls
+        document.addEventListener('DOMContentLoaded', function() {
+            // Workflow control buttons
+            const startBtn = document.querySelector('button:has(.fa-play)');
+            const stopBtn = document.querySelector('button:has(.fa-stop)');
+            const restartBtn = document.querySelector('button:has(.fa-redo)');
+
+            if (startBtn) {
+                startBtn.addEventListener('click', function() {
+                    showNotification('Workflow started successfully', 'success');
+                });
+            }
+
+            if (stopBtn) {
+                stopBtn.addEventListener('click', function() {
+                    showNotification('Workflow stopped', 'warning');
+                });
+            }
+
+            if (restartBtn) {
+                restartBtn.addEventListener('click', function() {
+                    showNotification('Workflow restarted', 'info');
+                });
+            }
+        });
+
+        // Notification system
+        function showNotification(message, type = 'info') {
+            const notification = document.createElement('div');
+            notification.className = `fixed top-4 right-4 z-50 p-4 rounded-lg shadow-lg transition-all duration-300 transform translate-x-full`;
+            
+            const colors = {
+                success: 'bg-green-600 text-white',
+                warning: 'bg-yellow-600 text-white',
+                error: 'bg-red-600 text-white',
+                info: 'bg-blue-600 text-white'
+            };
+            
+            notification.className += ` ${colors[type] || colors.info}`;
+            notification.innerHTML = `
+                <div class="flex items-center space-x-2">
+                    <i class="fas fa-${type === 'success' ? 'check' : type === 'warning' ? 'exclamation-triangle' : type === 'error' ? 'times' : 'info'}-circle"></i>
+                    <span>${message}</span>
+                </div>
+            `;
+            
+            document.body.appendChild(notification);
+            
+            // Animate in
+            setTimeout(() => {
+                notification.classList.remove('translate-x-full');
+            }, 100);
+            
+            // Auto-remove after 3 seconds
+            setTimeout(() => {
+                notification.classList.add('translate-x-full');
+                setTimeout(() => {
+                    document.body.removeChild(notification);
+                }, 300);
+            }, 3000);
+        }
+
+        // Initialize dashboard
+        updateMetrics();
+    </script>
+</body>
+</html>
+<!-- [END OF WEBSITE TEMPLATE] -->
